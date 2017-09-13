@@ -1,1 +1,1 @@
-# Todo-List
+# Todo-List project from PracticalJavascript.com
