@@ -10,9 +10,9 @@ var todoList = {
     });
     this.displayTodos();
   }, //it adds todos (but in object form)
-  changeTodo: function(position, newValue){
-    this.todos[position]=newValue;
-    this.displayTodos();
+  changeTodo: function(position, todoText){
+    this.todos[position].todoText = todoText; //it now access the "todoText"
+    this.displayTodos();                      //property of the object
   }, //it changes todos
   deleteTodo: function(position){
     this.todos.splice(position, 1);
