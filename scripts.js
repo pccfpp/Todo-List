@@ -1,12 +1,12 @@
 var todoList = {
-  todos: [],
+  todos: [],  //array of objects not declared
   displayTodos: function(){
     console.log('My Todos:', this.todos);
   }, //it displays todos
   addTodo: function(todoText){
     this.todos.push({
-      todoText: todoText,
-      completed: false 
+      todoText: todoText,  //you declare objects while
+      completed: false     //you add them
     });
     this.displayTodos();
   }, //it adds todos (but in object form)
@@ -17,5 +17,10 @@ var todoList = {
   deleteTodo: function(position){
     this.todos.splice(position, 1);
     this.displayTodos();
-  } //it deletes todos
+  }, //it deletes todos
+  toggleCompleted: function(position){
+    var todo = this.todos[position];   //you can pass an object
+    todo.completed = !todo.completed;  //into a variable
+    this.displayTodos();
+  } //it toogles the completed property
 };
