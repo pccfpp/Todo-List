@@ -1,12 +1,15 @@
 var todoList = {
-  todos: ['item 1', 'item 2', 'item 3'],
+  todos: [],
   displayTodos: function(){
     console.log('My Todos:', this.todos);
   }, //it displays todos
-  addTodo: function(todo){
-    this.todos.push(todo);
+  addTodo: function(todoText){
+    this.todos.push({
+      todoText: todoText,
+      completed: false 
+    });
     this.displayTodos();
-  }, //it adds todos
+  }, //it adds todos (but in object form)
   changeTodo: function(position, newValue){
     this.todos[position]=newValue;
     this.displayTodos();
