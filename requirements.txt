@@ -1,5 +1,4 @@
-V5 Requirements
+V6 Requirements
 
--.displayTodos should show .todoText
--.displayTodos should tell you if .todos is empty
--.displayTodos should show .completed
+-.toggleAll: If everything's true, make everything false
+-.toggleAll: Otherwise, make everything true 
