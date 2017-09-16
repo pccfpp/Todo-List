@@ -7,7 +7,12 @@ var todoList = {
     else{
       console.log('My Todos:');
       for (var i = 0; i < this.todos.length; i++){
-        console.log(this.todos[i].todoText);
+        if(this.todos[i].completed === true){
+          console.log('(x)', this.todos[i].todoText);
+        }//it shows if a given todo is completed
+        else{
+          console.log('( )', this.todos[i].todoText);
+        }
       }//it displays the todoText property of each element of the array
     }
   }, 
