@@ -1,11 +1,16 @@
 var todoList = {
   todos: [],  //array of objects not declared
   displayTodos: function(){
-    console.log('My Todos:');
-    for (var i = 0; i < this.todos.length; i++){
-      console.log(this.todos[i].todoText);
-    };
-  }, //it displays the todoText property of each element of the array
+    if (this.todos.length === 0){
+      console.log('Your todo list is empy!');
+    }//it tells if the array is empty
+    else{
+      console.log('My Todos:');
+      for (var i = 0; i < this.todos.length; i++){
+        console.log(this.todos[i].todoText);
+      }//it displays the todoText property of each element of the array
+    }
+  }, 
   addTodo: function(todoText){
     this.todos.push({
       todoText: todoText,  //you declare objects while
