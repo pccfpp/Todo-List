@@ -12,7 +12,7 @@ var todoList = {
         }//it shows if a given todo is completed
         else{
           console.log('( )', this.todos[i].todoText);
-        }
+        }//it shows if a given todo is not completed
       }//it displays the todoText property of each element of the array
     }
   }, 
@@ -35,5 +35,20 @@ var todoList = {
     var todo = this.todos[position];   //you can pass an object
     todo.completed = !todo.completed;  //into a variable
     this.displayTodos();
-  } //it toogles the completed property
+  }, //it toggles the completed property
+  toggleAll: function(){
+    var totalTodos = this.todos.length;
+    var completedTodos = 0;
+    for(var i=0; i < totalTodos; i++){
+      if(this.todos[i].completed === true){
+        completedTodos++;
+      }//it counts how many todos are completed
+    }
+    if (completedTodos === totalTodos){
+      for(var i = 0; i < totalTodos; i++){
+        this.todos[i].completed = false;
+      }//it toggles all the todos (if they are all completed)
+    }
+    this.displayTodos();
+  }
 };
