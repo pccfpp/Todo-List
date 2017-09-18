@@ -49,6 +49,10 @@ var todoList = {
         this.todos[i].completed = false;
       }//it toggles all the todos (if they are all completed)
     }
+    else{
+      for (var i = 0; i < totalTodos; i++)
+      this.todos[i].completed = true;
+    }//it toggles the non completed todos
     this.displayTodos();
   }
 };
