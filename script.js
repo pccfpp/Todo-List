@@ -57,11 +57,11 @@ var todoList = {
   }
 };
 
-var displayTodosButton = document.getElementById('displayTodosButton');//it access the displayTodosButton by assigning it to a variable
-var toggleAllButton = document.getElementById('toggleAllButton');//it access the toggleAllButton
-displayTodosButton.addEventListener('click', function(){
-  todoList.displayTodos();
-});//it runs displayTodos when displayTodoButton is clicked
-toggleAllButton.addEventListener('click', function(){
-  todoList.toggleAll();//it runs toggleAll
-});
+var handlers = {
+  displayTodos: function (){
+    todoList.displayTodos();
+  },
+  toggleAll: function(){
+    todoList.toggleAll;
+  }
+};
