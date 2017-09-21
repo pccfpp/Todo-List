@@ -87,5 +87,11 @@ var view = {
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
     }
-  } 
+  },
+  createDeleteButton: function(){
+    var deleteButton = document.createElement('button');//it creates a button
+    deleteButton.textcontent = 'Delete';//it names the button
+    deleteButton.className = 'deleteButton';//it creates a class of elements in order to access them
+    return deleteButton;
+  }
 };
