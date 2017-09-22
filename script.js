@@ -85,6 +85,7 @@ var view = {
       }
 
       todoLi.textContent = todoTextWithCompletion;
+      todoLi.appendChild(this.createDeleteButton);//it creates a delete button for each todo
       todosUl.appendChild(todoLi);
     }
   },
