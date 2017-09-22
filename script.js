@@ -84,6 +84,7 @@ var view = {
         todoTextWithCompletion = '( )' + todo.todoText;
       }
 
+      todoLi.id = i;//it gives each li an id with his position
       todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton);//it creates a delete button for each todo
       todosUl.appendChild(todoLi);
